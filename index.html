@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sistema Hospitalar - Equipamentos</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header>Sistema Hospitalar — Gestão de Equipamentos</header>
+
+
+  <div id="mensagem"></div>
+
+
+  <div class="card">
+
+    <h2 id="form-titulo">Cadastrar Equipamento</h2>
+    <form id="form-equipamento">
+      <input type="hidden" id="edit-numero" />
+      <div class="grid">
+        <label>Nome
+          <input type="text" id="nome" placeholder="Ex: Ventilador Mecânico" required />
+        </label>
+        <label>Marca
+          <input type="text" id="marca" placeholder="Ex: Philips" required />
+        </label>
+        <label>Modelo
+          <input type="text" id="modelo" placeholder="Ex: V60" required />
+        </label>
+        <label>Número de Série
+          <input type="text" id="numero" placeholder="Ex: SN-00123" required />
+        </label>
+        <label>Registro ANVISA
+          <input type="text" id="registro" placeholder="Ex: 80009310001" required />
+        </label>
+        <label>Setor
+          <input type="text" id="setor" placeholder="Ex: UTI Adulto" required />
+        </label>
+        <label>Status
+          <select id="status">
+            <option value="Operacional">Operacional</option>
+            <option value="Em Manutenção">Em Manutenção</option>
+            <option value="Inativo">Inativo</option>
+          </select>
+        </label>
+        <label>Última Manutenção
+          <input type="date" id="ultima_manutencao" required />
+        </label>
+      </div>
+      <div class="btn-row">
+        <button type="submit" class="btn-primary" id="btn-submit">Cadastrar</button>
+        <button type="button" class="btn-cancel" id="btn-cancelar" style="display:none" onclick="cancelarEdicao()">Cancelar</button>
+      </div>
+    </form>
+  </div>
+
+ 
+  <div class="card">
+    <h2>Equipamentos Cadastrados</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Marca / Modelo</th>
+          <th>Nº Série</th>
+          <th>ANVISA</th>
+          <th>Setor</th>
+          <th>Status</th>
+          <th>Ult. Manutenção</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody id="tabela-body">
+        <tr><td colspan="8" id="sem-dados">Carregando...</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+</main>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

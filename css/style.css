@@ -1,0 +1,132 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f4f8;
+  color: #333;
+}
+
+header {
+  background: #1a73e8;
+  color: white;
+  padding: 16px 32px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+main {
+  max-width: 1100px;
+  margin: 32px auto;
+  padding: 0 16px;
+}
+
+/* --- FORMULÁRIO --- */
+.card {
+  background: white;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 32px;
+}
+
+.card h2 {
+  font-size: 18px;
+  margin-bottom: 16px;
+  color: #1a73e8;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.grid label {
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  font-weight: bold;
+  color: #555;
+}
+
+.grid input, .grid select {
+  margin-top: 4px;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.grid input:focus, .grid select:focus {
+  outline: none;
+  border-color: #1a73e8;
+}
+
+.btn-row {
+  margin-top: 16px;
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  padding: 9px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.btn-primary { background: #1a73e8; color: white; }
+.btn-primary:hover { background: #1558b0; }
+
+.btn-cancel { background: #e0e0e0; color: #333; }
+.btn-cancel:hover { background: #bdbdbd; }
+
+/* --- MENSAGEM --- */
+#mensagem {
+  padding: 10px 16px;
+  border-radius: 5px;
+  margin-bottom: 16px;
+  display: none;
+  font-size: 14px;
+}
+#mensagem.sucesso { background: #d4edda; color: #155724; display: block; }
+#mensagem.erro    { background: #f8d7da; color: #721c24; display: block; }
+
+/* --- TABELA --- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+thead tr { background: #1a73e8; color: white; }
+thead th { padding: 10px 12px; text-align: left; }
+
+tbody tr:nth-child(even) { background: #f9f9f9; }
+tbody tr:hover { background: #e8f0fe; }
+
+tbody td { padding: 9px 12px; border-bottom: 1px solid #e0e0e0; }
+
+.badge {
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.badge-ok         { background: #d4edda; color: #155724; }
+.badge-manutencao { background: #fff3cd; color: #856404; }
+.badge-inativo    { background: #f8d7da; color: #721c24; }
+
+.btn-edit   { background: #ffc107; color: #333; padding: 5px 10px; font-size: 12px; }
+.btn-edit:hover { background: #e0a800; }
+
+.btn-delete { background: #dc3545; color: white; padding: 5px 10px; font-size: 12px; margin-left: 4px; }
+.btn-delete:hover { background: #b02a37; }
+
+#sem-dados {
+  text-align: center;
+  padding: 24px;
+  color: #888;
+}
